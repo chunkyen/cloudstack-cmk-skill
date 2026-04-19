@@ -1,6 +1,6 @@
 # Apache CloudStack CMK Skill for OpenClaw
 
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.4.9-blue)](https://openclaw.ai) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.4.9-blue)](https://openclaw.ai) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 A comprehensive OpenClaw skill for managing **Apache CloudStack** environments via the [`cmk`](https://github.com/apache/cloudstack-cloudmonkey) (CloudMonkey) CLI. Provides programmatic access to 870+ CloudStack APIs with safety-guarded approval workflows.
 
@@ -95,7 +95,7 @@ This skill follows the OpenClaw AgentSkills specification:
 
 ## 📝 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+Licensed under the Apache License, Version 2.0 — see [LICENSE](LICENSE) for details.
 
 ---
 
