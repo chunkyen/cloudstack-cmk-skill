@@ -35,7 +35,7 @@ description: Apache CloudStack management via `cmk` (CloudMonkey) CLI
   - List all APIs starting with "list": `jq '.api[] | select(.name | startswith("list"))' ~/.cmk/profiles/localcloud.cache`
   - Find Kubernetes-related APIs: `jq -r '.api[] | select(.name | ascii_downcase | contains("kubernetes")) | .name' ~/.cmk/profilename.cache`
 
-Note: Replace `localcloud.cache` with `<protemplate>.cache` depending on your active profile name.
+Note: Replace `localcloud.cache` with `<profile-name>.cache` depending on your active profile name.
 
 ## Steps:
 1. Verify: `which cmk`
