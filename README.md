@@ -13,6 +13,15 @@ A comprehensive OpenClaw skill for managing **Apache CloudStack** environments v
 - **API Discovery**: Automatic caching of CloudStack APIs via `cmk sync` — query with `jq` when documentation is sparse
 - **OpenClaw Integration**: Native support for sub-agents, background tasks, and structured error handling
 
+## 🚀 Prerequisites
+
+Before using this skill, ensure the [`cmk`](https://github.com/apache/cloudstack-cloudmonkey) (CloudMonkey) CLI is installed on your system.
+
+```bash
+# Example installation (ensure you follow the official instructions)
+# Download the binary from GitHub releases or use a package manager if available
+```
+
 ## 📚 Quick Start
 
 ### Installation
