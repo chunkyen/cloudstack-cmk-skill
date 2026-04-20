@@ -29,20 +29,20 @@ git clone https://github.com/chunkyen/cloudstack-cmk-skill.git \
 
 ### Configuration
 
-Configure your CloudStack endpoint in `~/.cmk/config`:
+Configure your CloudStack endpoint in `~/.cmk/config`. You can create and configure a new profile (e.g., `mycloud`) using the `-p` flag with `set` commands.
 
 ```bash
-# Set up profile
-cmk -p localcloud set url https://your-cloudswalk-api.com/client/api
-cmk -p localcloud set username admin@domain
-cmk -p localcloud set password YOUR_SECRET_KEY
+# Create and configure a new profile named 'mycloud'
+cmk -p mycloud set url https://your-cloudstack-api.com/client/api
+cmk -p mycloud set username admin@domain
+cmk -p mycloud set password YOUR_SECRET_KEY
 
-# Alternatively, use API Key and Secret Key
-cmk -p localcloud set apikey YOUR_API_KEY
-cmk -p localcloud set secretkey YOUR_SECRET_KEY
+# Alternatively, use API Key and Secret Key for the same profile
+cmk -p mycloud set apikey YOUR_API_KEY
+cmk -p mycloud set secretkey YOUR_SECRET_KEY
 
-# Sync APIs from your server (downloads 870+ endpoints to cache)
-cmk -p localcloud sync
+# Sync APIs from your server to update the cache for 'mycloud'
+cmk -p mycloud sync
 ```
 
 ## 🛠️ Usage Examples
