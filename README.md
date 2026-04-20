@@ -53,19 +53,6 @@ cmk -p mycloud sync
 
 ## 🛠️ Usage Examples
 
-### Basic Operations
-
-```bash
-# List VMs in zone
-cmk -p localcloud list virtualmachines zone=x79zone | jq '.virtualmachine[] | {name, state, ipaddress}'
-
-# Start a stopped Kubernetes cluster
-cmk -p localcloud start kubernetescluster id=63a2cd00-d81f-4e49-aa21-b5fd0daf6e4a
-
-# Download kubeconfig for CKS (CloudStack-managed Kubernetes)
-cmk -p localcloud getKubernetesClusterConfig id=<UUID> | \
-  jq -r '.clusterconfig.configdata' > ~/.kube/config-v135
-```
 
 ### Advanced: API Cache Discovery
 
