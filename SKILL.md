@@ -55,4 +55,4 @@ Note: The default path is `~/.cmk/profiles/localcloud.cache`, but you should rep
 ## Do not:
 - Run `destroy`/`purge` without explicit `/approve:yes/no`
 - Skip `which cmk` verification — binary may be missing from PATH
-- Assume commands work without running `sync` first on new setups
+- **Always run** `cmk -p localcloud sync` on new setups to ensure the API cache is up to date.
