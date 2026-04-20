@@ -31,9 +31,9 @@ description: Apache CloudStack management via `cmk` (CloudMonkey) CLI
 **Note**: Some resources (VMs, volumes) have a destroy→expunge lifecycle (~24h default). They sit in "Destroyed" state and can be recovered via `recover*` APIs until permanently expunged. Networks/VPCs/IPs delete immediately without recovery window.
 - **Unknown commands**? Run `cmk -p localcloud sync` to refresh API cache at `~/.cmk/profiles/localcloud.cache`
 - Query parameters via: `<verb> <resource> -h` (e.g., `list users -h`)
-- Cache is JSON — use `jq` to explore endpoints. For example:
+- **Discover APIs via Cache**: Use `jq` to explore the JSON cache and discover all supported APIs. Once you find an API, you can translate it into a standard `cmk <verb> <resource>` command. For example:
   - List all APIs starting with "list": `jq '.api[] | select(.name | startswith("list"))' ~/.cmk/profiles/localcloud.cache`
-  - Find Kubernetes-related APIs: `jq -r '.api[] | select(.name | ascii_downcase | contains("kubernetes")) | .name' ~/.cmk/profilename.cache`
+  - Find Kubernetes-related APIs: `jq -r '.api[] | select(. .name | ascii_downcase | contains("kubernetes")) | .name' ~/.cmk/profilename.cache`
 
 Note: Replace `localcloud.cache` with `<profile-name>.cache` depending on your active profile name.
 
