@@ -29,9 +29,13 @@ Configure your CloudStack endpoint in `~/.cmk/config`:
 
 ```bash
 # Set up profile
-cmk -p localcloud set url https://your-cloudstack-api.com/client/api
+cmk -p localcloud set url https://your-cloudswalk-api.com/client/api
 cmk -p localcloud set username admin@domain
 cmk -p localcloud set password YOUR_SECRET_KEY
+
+# Alternatively, use API Key and Secret Key
+cmk -p localcloud set apikey YOUR_API_KEY
+cmk -p localcloud set secretkey YOUR_SECRET_KEY
 
 # Sync APIs from your server (downloads 870+ endpoints to cache)
 cmk -p localcloud sync
