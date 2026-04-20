@@ -38,6 +38,7 @@ cmk -p localcloud set username admin@domain
 cmk -p localcloud set password YOUR_SECRET_KEY
 
 # OR: Create and configure a new profile named 'mycloud'
+cmk set profile mycloud
 cmk -p mycloud set url https://your-cloudstack-api.com/client/api
 cmk -p mycloud set username admin@domain
 cmk -p mycloud set password YOUR_SECRET_KEY
