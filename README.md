@@ -15,12 +15,7 @@ A comprehensive OpenClaw skill for managing **Apache CloudStack** environments v
 
 ## 🚀 Prerequisites
 
-Before using this skill, ensure the [`cmk`](https://github.com/apache/cloudstack-cloudmonkey) (CloudMonkey) CLI is installed on your system.
-
-```bash
-# Example installation (ensure you follow the official instructions)
-# Download the binary from GitHub releases or use a package manager if available
-```
+Before using this skill, ensure the [`cmk`](https://github.com/apache/cloudstack-cloudmonkey) (CloudMonkey) CLI is installed on your system. Detailed installation instructions can be found in the [CloudMonkey GitHub repository](https://github.com/apache/cloudstack-cloudmonkey).
 
 ## 📚 Quick Start
 
