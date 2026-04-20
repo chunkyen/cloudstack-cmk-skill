@@ -33,9 +33,9 @@ description: Apache CloudStack management via `cmk` (CloudMonkey) CLI
 - Query parameters via: `<verb> <resource> -h` (e.g., `list users -h`)
 - **Discover APIs via Cache**: Use `jq` to explore the JSON cache and discover all supported APIs. Once you find an API, you can translate it into a standard `cmk <verb> <resource>` command. For example:
   - List all APIs starting with "list": `jq '.api[] | select(.name | startswith("list"))' ~/.cmk/profiles/localcloud.cache`
-  - Find Kubernetes-related APIs: `jq -r '.api[] | select(. .name | ascii_downcase | contains("kubernetes")) | .name' ~/.cmk/profilename.cache`
+  - Find Kubernetes-related APIs: `jq -r '.api[] | select(. .name | ascii_downcase | contains("kubernetes")) | .name' ~/.cmk/profiles/localcloud.cache`
 
-Note: Replace `localcloud.cache` with `<profile-name>.cache` depending on your active profile name.
+Note: The default path is `~/.cmk/profiles/localcloud.cache`, but you should replace `localcloud.cache` with `<profile-name>.cache` if using a different profile.
 
 ## Steps:
 1. Verify: `which cmk`
