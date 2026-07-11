@@ -65,6 +65,22 @@ cat ~/.cmk/profiles/localcloud.cache | \
   jq -r '.api[]? | select(.name|test("kube"; "i"))' | head -5 
 ```
 
+## ⚠️ Disclaimer — Permission Scope
+
+This skill operates with **whatever permissions are assigned to the `cmk` login** — whether configured via username/password or API key/secret key. The agent does not and cannot enforce additional restrictions beyond what CloudStack's own RBAC allows for that credential.
+
+- If the `cmk` profile is logged in as **root admin**, the agent can perform **any** operation including destructive ones (delete domains, destroy VMs, purge volumes, etc.).
+- If logged in as a **domain admin** or **limited user**, the agent is constrained to that role's scope.
+
+**You are responsible** for ensuring the `cmk` profile uses a credential with the minimum necessary privileges for your use case. The skill's built-in confirmation prompts for destructive operations are a safety net, not a substitute for proper credential scoping.
+
+**Before using this skill in production**, verify your `cmk` profile's effective permissions:
+```bash
+cmk -p <profile> list accounts    # can you see accounts outside your domain?
+cmk -p <profile> list domains     # can you see the ROOT domain?
+```
+If you can see resources beyond your intended scope, your credential has broader access than you may want.
+
 ## ⚠️ Safety & Approvals
 
 This skill enforces a **two-tier approval system** for destructive operations:
