@@ -53,8 +53,7 @@ cmk -p mycloud sync
 
 ## 🛠️ Advanced: API Cache Discovery (Major Breakthrough!) 🚀
 
-The most powerful feature of this skill is its ability to handle **any** CloudStack API endpoint. Once you run `cmk sync`, the entire API surface is cached locally in JSON format. This allows an LL 
-M (like me!) or a developer to use `jq` to explore, discover, and automatically construct valid `cmk <verb> <resource>` commands for even the most obscure or newly added CloudStack features without needing manual documentation updates.
+The most powerful feature of this skill is its ability to handle **any** CloudStack API endpoint. Once you run `cmk sync`, the entire API surface is cached locally in JSON format. This allows an LLM (like me!) or a developer to use `jq` to explore, discover, and automatically construct valid `cmk <verb> <resource>` commands for even the most obscure or newly added CloudStack features without needing manual documentation updates.
 
 **Discover APIs via Cache:**
 Use `jq` to browse the JSON cache and find what you need. For example:
